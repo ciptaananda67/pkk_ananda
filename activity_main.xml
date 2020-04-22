@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#e6f2ff">
+
+    <LinearLayout
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/judul"
+        android:background="#99ccff"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:paddingLeft="15dp"
+            android:src="@drawable/matahariku"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="310dp"
+            android:textColor="#ffff"
+            android:textSize="35dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:text="Wheater Apps"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/isi"
+        app:layout_constraintTop_toBottomOf="@id/judul"
+        android:orientation="horizontal"
+        android:background="#b3d9ff"
+        android:layout_height="350dp"
+        android:layout_below="@id/judul"
+        tools:ignore="MissingConstraints">
+        <TableLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:paddingLeft="30dp">
+            <TableRow>
+                <TextView
+                    android:id="@+id/tanggal"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:textColor="#ffff"
+                    android:padding="10dp"
+                    android:textSize="20dp"
+                    android:text="Today, April 03" />
+            </TableRow>>
+            <TableRow>
+                <TextView
+                    android:id="@+id/duaenam"
+                    android:layout_height="match_parent"
+                    android:textColor="#ffff"
+                    android:layout_column="1"
+                    android:padding="10dp"
+                    android:textSize="70dp"
+                    android:text="26°" />
+            </TableRow>
+            <TableRow>
+            <TextView
+                android:id="@+id/duapuluh"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:padding="10dp"
+                android:textColor="#ffff"
+                android:textSize="40dp"
+                android:text="20°" />
+        </TableRow>>
+        </TableLayout>>
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="170dp">
+            <ImageView
+                android:id="@+id/awan"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:src="@drawable/hujanku"
+                android:text="awan"
+                android:layout_width="260dp" />
+            <TextView
+                android:id="@+id/cloudy"
+                android:layout_height="80dp"
+                android:textColor="#ffff"
+                android:gravity="center"
+                android:layout_below="@id/awan"
+                android:textSize="30dp"
+                android:text="Cloudy"
+                android:layout_width="240dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/penutupbagian"
+        app:layout_constraintTop_toBottomOf="@id/isi"
+        android:orientation="horizontal"
+        android:layout_height="80dp"
+        android:background="#cce6ff"
+        android:layout_below="@id/isi">
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:paddingLeft="15dp"
+            android:src="@drawable/awann"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="310dp"
+            android:textSize="30dp"
+            android:textColor="#ffff"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:text="12.00"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/penutup"
+        app:layout_constraintTop_toBottomOf="@id/penutupbagian"
+        android:orientation="horizontal"
+        android:layout_height="80dp"
+        android:background="#cce6ff"
+        android:layout_below="@id/isi">
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:paddingLeft="15dp"
+            android:src="@drawable/awann"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="310dp"
+            android:textSize="30dp"
+            android:textColor="#ffff"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:text="13.00"></TextView>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
