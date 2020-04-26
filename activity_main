@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main"
+    android:padding="20dp"
+    tools:context=".MainActivity"
+    android:background="#ff4d4d">
+
+    <Button
+        android:text="Telepon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnpgl"
+       android:onClick="panggil"
+        tools:ignore="OnClick" />
+    <Button
+        android:text="BUKA BROWSER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnpgl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/btnbuka"
+        android:onClick="buka" />
+
+    <Button
+        android:text="TENTANG APLIKASI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnbuka"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:id="@+id/btninfo"
+        android:onClick="tentang"
+        />
+
+
+</RelativeLayout >
+
+MainActivity.java
+package com.example.implicitintent;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    public void  panggil(View view){
+        String nomor = "089667347";
+        Intent panggil = new Intent(Intent.ACTION_DIAL);
+        panggil.setData(Uri.fromParts("tel",nomor,null));
+        startActivity(panggil);
+    }
+    public void buka(View view){
+        String url = "https://smkn4bdg.sch.id";
+        Intent bukabrowser = new Intent(Intent.ACTION_VIEW);
+        bukabrowser.setData(Uri.parse(url));
+        startActivity(bukabrowser);
+    }
+    public void tentang(View view){
+    Intent tentang = new Intent(MainActivity.this,Activity_Tentang.class);
+    startActivity(tentang);
+    }
+}
